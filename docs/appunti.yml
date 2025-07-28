@@ -1,0 +1,32 @@
+site_name: PRIMO
+site_url: https://primo.crearobotics.com
+site_description: PRIMO documentation
+site_author: CREA Robotics
+site_logo: images/logo.png
+site_icon: images/favicon.ico
+#repo_url:
+
+nav:
+  - Home: index.md
+  - Fondamenti: cos_e_la_robotica.md
+  - Struttua del robot: struttura_robotica.md
+  - Componenti: componenti_primo.md
+  - Controllo: controllo_robot.md
+  - Programmazione: programmazione.md
+  - Programmazione Avanzata: programmazione_avanzata.md
+  - Approfondimenti: approfondimenti.md
+#theme: readthedocs
+
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: cyan
+    accent: amber
+  features:
+    - navigation.tabs
+    - content.code.copy
+  icon:
+    logo: fontawesome/solid/robot
+    
