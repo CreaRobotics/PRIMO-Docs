@@ -1,0 +1,1217 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crearobotics.github.io/PRIMO-Docs/reference/code-blocks/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Code blocks - PRIMO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#code-blocks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PRIMO" class="md-header__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRIMO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Code blocks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cos_e_la_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fondamenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../struttura_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Struttura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../componenti_primo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Componenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../controllo_robot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Controllo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione_avanzata/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione Avanzata
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../approfondimenti/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Approfondimenti
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PRIMO" class="md-nav__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    PRIMO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cos_e_la_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fondamenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../struttura_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struttura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../componenti_primo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../controllo_robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione_avanzata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione Avanzata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approfondimenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approfondimenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-copy-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code copy button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-selection-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code selection button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code annotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-selectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom selectors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#highlighting-specific-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highlighting specific lines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#highlighting-inline-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highlighting inline code blocks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="code-blocks">Code blocks</h1>
+<p>Code blocks and examples are an essential part of technical project
+documentation. Material for MkDocs provides different ways to set up syntax
+highlighting for code blocks, either during build time using <a href="https://pygments.org">Pygments</a> or
+during runtime using a JavaScript syntax highlighter.</p>
+<h2 id="configuration">Configuration</h2>
+<p>This configuration enables syntax highlighting on code blocks and inline code
+blocks, and allows to include source code directly from other files. Add the
+following lines to <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+</code></pre>
+<p>The following sections discuss how to use different syntax highlighting features
+with <a href="https://pygments.org">Pygments</a>, the recommended highlighter, so they don't apply when using a
+JavaScript syntax highlighter.</p>
+<p>See additional configuration options:</p>
+<ul>
+<li><a href="../../setup/extensions/python-markdown-extensions/#highlight">Highlight</a></li>
+<li><a href="../../setup/extensions/python-markdown-extensions/#inlinehilite">InlineHilite</a></li>
+<li><a href="../../setup/extensions/python-markdown-extensions/#superfences">SuperFences</a></li>
+<li><a href="../../setup/extensions/python-markdown-extensions/#snippets">Snippets</a></li>
+</ul>
+<h3 id="code-copy-button">Code copy button</h3>
+<!-- md:version 9.0.0 -->
+<!-- md:feature -->
+
+<p>Code blocks can automatically render a button on the right side to allow the
+user to copy a code block's contents to the clipboard. Add the following to
+<code>mkdocs.yml</code> to enable them globally:</p>
+<pre><code class="language-yaml">theme:
+  features:
+    - content.code.copy
+</code></pre>
+<p>??? info "Enabling or disabling code copy buttons for a specific code block"</p>
+<pre><code>If you don't want to enable code copy buttons globally, you can enable them
+for a specific code block by using a slightly different syntax based on the
+[Attribute Lists] extension:
+
+```` yaml
+``` { .yaml .copy }
+# Code block content
+```
+````
+
+Note that there must be a language shortcode, which has to come first and
+must also be prefixed by a `.`. Similarly, the copy button can also be
+disabled for a specific code block:
+
+```` { .yaml .no-copy }
+``` { .yaml .no-copy }
+# Code block content
+```
+````
+
+To enable or disable the copy button without syntax highlighting, you can
+use the `.text` language shortcode, which doesn't highlight anything.
+</code></pre>
+<h3 id="code-selection-button">Code selection button</h3>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.32.0 -->
+<!-- md:flag experimental -->
+
+<p>Code blocks can include a button to allow for the selection of line ranges by
+the user, which is perfect for linking to a specific subsection of a code block. This allows the user to apply <a href="#highlighting-specific-lines">line highlighting</a> dynamically. Add the following
+to <code>mkdocs.yml</code> to enable it globally:</p>
+<pre><code class="language-yaml">theme:
+  features:
+    - content.code.select
+</code></pre>
+<p>??? info "Enabling or disabling code selection buttons for a specific code block"</p>
+<pre><code>If you don't want to enable code selection buttons globally, you can enable
+them for a specific code block by using a slightly different syntax based on
+the [Attribute Lists] extension:
+
+```` yaml
+``` { .yaml .select }
+# Code block content
+```
+````
+
+Note that the language shortcode which has to come first must now also be
+prefixed by a `.`. Similarly, the selection button can also be disabled for
+a specific code block:
+
+```` { .yaml .no-select }
+``` { .yaml .no-select }
+# Code block content
+```
+````
+</code></pre>
+<h3 id="code-annotations">Code annotations</h3>
+<!-- md:version 8.0.0 -->
+<!-- md:feature -->
+
+<p>Code annotations offer a comfortable and friendly way to attach arbitrary
+content to specific sections of code blocks by adding numeric markers in block
+and inline comments in the language of the code block. Add the following to
+<code>mkdocs.yml</code> to enable them globally:</p>
+<pre><code class="language-yaml">theme:
+  features:
+    - content.code.annotate # (1)!
+</code></pre>
+<ol>
+<li>:man_raising_hand: I'm a code annotation! I can contain <code>code</code>, <strong>formatted
+    text</strong>, images, ... basically anything that can be written in Markdown.</li>
+</ol>
+<p>??? info "Enabling code annotations for a specific code block"</p>
+<pre><code>If you don't want to enable code annotations globally, because you don't
+like the automatic inlining behavior, you can enable them for a specific
+code block by using a slightly different syntax based on the
+[Attribute Lists] extension:
+
+```` yaml
+``` { .yaml .annotate }
+# Code block content
+```
+````
+
+Note that the language shortcode which has to come first must now also be
+prefixed by a `.`.
+</code></pre>
+<h4 id="custom-selectors">Custom selectors</h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.32.0 -->
+<!-- md:flag experimental -->
+
+<p>Normally, code annotations can only be <a href="#adding-annotations">placed in comments</a>, as comments can be
+considered safe for placement. However, sometimes it might be necessary to place
+annotations in parts of the code block where comments are not allowed, e.g. in
+strings.</p>
+<p>Additional selectors can be set per-language:</p>
+<pre><code class="language-yaml">extra:
+  annotate:
+    json: [.s2] # (1)!
+</code></pre>
+<ol>
+<li>
+<p><a href="https://github.com/squidfunk/mkdocs-material/blob/87d5ca487b9d9ab95c41ee72813149d214048693/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss#L45"><code>.s2</code></a> is the name of the lexeme that <a href="https://pygments.org">Pygments</a> generates for double-quoted
+    strings. If you want to use a code annotation in another lexeme than a
+    comment, inspect the code block and determine which lexeme needs to be added
+    to the list of additional selectors.</p>
+<p><strong>Important</strong>: Code annotations cannot be split between lexemes.</p>
+</li>
+</ol>
+<p>Now, code annotations can be used from within strings in JSON:</p>
+<pre><code class="language-json">{
+  &quot;key&quot;: &quot;value (1)&quot;
+}
+</code></pre>
+<ol>
+<li>:man_raising_hand: I'm a code annotation! I can contain <code>code</code>, <strong>formatted
+    text</strong>, images, ... basically anything that can be written in Markdown.</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<p>Code blocks must be enclosed with two separate lines containing three backticks.
+To add syntax highlighting to those blocks, add the language shortcode directly
+after the opening block. See the [list of available lexers] to find the
+shortcode for a given language:</p>
+<p>```` markdown title="Code block"</p>
+<pre><code class="language-py">import tensorflow as tf
+</code></pre>
+<pre><code>
+&lt;div class=&quot;result&quot; markdown&gt;
+
+``` py
+import tensorflow as tf
+```
+
+&lt;/div&gt;
+
+  [list of available lexers]: https://pygments.org/docs/lexers/
+
+### Adding a title
+
+In order to provide additional context, a custom title can be added to a code
+block by using the `title=&quot;&lt;custom title&gt;&quot;` option directly after the shortcode,
+e.g. to display the name of a file:
+
+```` markdown title=&quot;Code block with title&quot;
+``` py title=&quot;bubble_sort.py&quot;
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] &gt; items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+```
+</code></pre>
+<div class="result" markdown>
+
+``` py title="bubble_sort.py"
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] > items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+
+<pre><code>
+&lt;/div&gt;
+
+### Adding annotations
+
+Code annotations can be placed anywhere in a code block where a comment for the
+language of the block can be placed, e.g. for JavaScript in `#!js // ...` and
+`#!js /* ... */`, for YAML in `#!yaml # ...`, etc.[^1]:
+
+  [^1]:
+    Code annotations require syntax highlighting with [Pygments] – they're
+    currently not compatible with JavaScript syntax highlighters, or languages
+    that do not have comments in their grammar. However, we're actively working
+    on supporting alternate ways of defining code annotations, allowing to
+    always place code annotations at the end of lines.
+
+```` markdown title=&quot;Code block with annotation&quot;
+``` yaml
+theme:
+  features:
+    - content.code.annotate # (1)
+</code></pre>
+
+
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
+    text__, images, ... basically anything that can be written in Markdown.
+
+<pre><code>
+&lt;div class=&quot;result&quot; markdown&gt;
+
+``` yaml
+theme:
+  features:
+    - content.code.annotate # (1)
+```
+
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
+    text__, images, ... basically anything that can be written in Markdown.
+
+&lt;/div&gt;
+
+#### Stripping comments
+
+&lt;!-- md:version 8.5.0 --&gt;
+&lt;!-- md:flag experimental --&gt;
+
+If you wish to strip the comment characters surrounding a code annotation,
+simply add an `!` after the closing parenthesis of the code annotation:
+
+```` markdown title=&quot;Code block with annotation, stripped&quot;
+``` yaml
+# (1)!
+```
+
+1.  Look ma, less line noise!
+</code></pre>
+
+
+<div class="result" markdown>
+
+
+<pre><code class="language-yaml"># (1)!
+</code></pre>
+
+
+1.  Look ma, less line noise!
+
+</div>
+
+Note that this only allows for a single code annotation to be rendered per
+comment. If you want to add multiple code annotations, comments cannot be
+stripped for technical reasons.
+
+### Adding line numbers
+
+Line numbers can be added to a code block by using the `linenums="<start>"`
+option directly after the shortcode, whereas `<start>` represents the starting
+line number. A code block can start from a line number other than `1`, which
+allows to split large code blocks for readability:
+
+```` markdown title="Code block with line numbers"
+``` py linenums="1"
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] > items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+
+<pre><code>````
+
+&lt;div class=&quot;result&quot; markdown&gt;
+
+``` py linenums=&quot;1&quot;
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] &gt; items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+</code></pre>
+
+
+</div>
+
+<h3 id="highlighting-specific-lines">Highlighting specific lines</h3>
+<p>Specific lines can be highlighted by passing the line numbers to the <code>hl_lines</code>
+argument placed right after the language shortcode. Note that line counts start
+at <code>1</code>, regardless of the starting line number specified as part of
+<a href="#adding-line-numbers"><code>linenums</code></a>:</p>
+<p>=== "Lines"</p>
+<pre><code>```` markdown title="Code block with highlighted lines"
+``` py hl_lines="2 3"
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] &gt; items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+```
+````
+
+&lt;div class="result" markdown&gt;
+
+``` py linenums="1" hl_lines="2 3"
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] &gt; items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+```
+
+&lt;/div&gt;
+</code></pre>
+<p>=== "Line ranges"</p>
+<pre><code>```` markdown title="Code block with highlighted line range"
+``` py hl_lines="3-5"
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] &gt; items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+```
+````
+
+&lt;div class="result" markdown&gt;
+
+``` py linenums="1" hl_lines="3-5"
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] &gt; items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+```
+
+&lt;/div&gt;
+</code></pre>
+<h3 id="highlighting-inline-code-blocks">Highlighting inline code blocks</h3>
+<p>When <a href="../../setup/extensions/python-markdown-extensions/#inlinehilite">InlineHilite</a> is enabled, syntax highlighting can be applied to inline
+code blocks by prefixing them with a shebang, i.e. <code>#!</code>, directly followed by
+the corresponding [language shortcode][list of available lexers].</p>
+<p><code>`` markdown title="Inline code block"
+The</code>#!python range()` function is used to generate a sequence of numbers.</p>
+<pre><code>
+&lt;div class=&quot;result&quot; markdown&gt;
+
+The `#!python range()` function is used to generate a sequence of numbers.
+
+&lt;/div&gt;
+
+### Embedding external files
+
+When [Snippets] is enabled, content from other files (including source files)
+can be embedded by using the [`--8&lt;--` notation][Snippets notation] directly
+from within a code block:
+
+```` markdown title=&quot;Code block with external content&quot;
+``` title=&quot;.browserslistrc&quot;
+;--8&lt;-- &quot;.browserslistrc&quot;
+</code></pre>
+<p>````</p>
+<div class="result" markdown>
+
+``` title=".browserslistrc"
+last 4 years
+
+<pre><code>
+&lt;/div&gt;
+
+  [Snippets notation]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
+
+## Customization
+
+### Custom syntax theme
+
+If [Pygments] is used, Material for MkDocs provides the [styles for code blocks]
+[colors], which are built with a custom and well-balanced palette that works
+equally well for both [color schemes]:
+
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-number-color) &quot; } `--md-code-hl-number-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-special-color) &quot; } `--md-code-hl-special-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-function-color) &quot; } `--md-code-hl-function-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-constant-color) &quot; } `--md-code-hl-constant-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-keyword-color) &quot; } `--md-code-hl-keyword-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-string-color) &quot; } `--md-code-hl-string-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-name-color) &quot; } `--md-code-hl-name-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-operator-color) &quot; } `--md-code-hl-operator-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-punctuation-color) &quot; } `--md-code-hl-punctuation-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-comment-color) &quot; } `--md-code-hl-comment-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-generic-color) &quot; } `--md-code-hl-generic-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-variable-color) &quot; } `--md-code-hl-variable-color`
+
+Code block foreground, background and line highlight colors are defined via:
+
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-fg-color) &quot; } `--md-code-fg-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-bg-color) &quot; } `--md-code-bg-color`
+- :material-checkbox-blank-circle:{ style=&quot;color: var(--md-code-hl-color) &quot; } `--md-code-hl-color`
+
+Let's say you want to change the color of `#!js &quot;strings&quot;`. While there are
+several [types of string tokens], they use the same color. You can assign
+a new color by using an [additional style sheet]:
+
+=== &quot;:octicons-file-code-16: `docs/stylesheets/extra.css`&quot;
+
+    ``` css
+    :root &gt; * {
+      --md-code-hl-string-color: #0FF1CE;
+    }
+    ```
+
+=== &quot;:octicons-file-code-16: `mkdocs.yml`&quot;
+
+    ``` yaml
+    extra_css:
+      - stylesheets/extra.css
+    ```
+
+If you want to tweak a specific type of string, e.g. ``#!js `backticks` ``, you
+can lookup the specific CSS class name in the [syntax theme definition], and
+override it as part of your [additional style sheet]:
+
+=== &quot;:octicons-file-code-16: `docs/stylesheets/extra.css`&quot;
+
+    ``` css
+    .highlight .sb {
+      color: #0FF1CE;
+    }
+    ```
+
+=== &quot;:octicons-file-code-16: `mkdocs.yml`&quot;
+
+    ``` yaml
+    extra_css:
+      - stylesheets/extra.css
+    ```
+
+  [colors]: https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/assets/stylesheets/main/_colors.scss
+  [color schemes]: ../setup/changing-the-colors.md#color-scheme
+  [types of string tokens]: https://pygments.org/docs/tokens/#literals
+  [additional style sheet]: ../customization.md#additional-css
+  [syntax theme definition]: https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/assets/stylesheets/main/extensions/pymdownx/_highlight.scss
+
+### Annotation tooltip width
+
+If you have a lot of content hosted inside your code annotations, it can be a
+good idea to increase the width of the tooltip by adding the following as part
+of an [additional style sheet]:
+
+=== &quot;:octicons-file-code-16: `docs/stylesheets/extra.css`&quot;
+
+    ``` css
+    :root {
+      --md-tooltip-width: 600px;
+    }
+    ```
+
+=== &quot;:octicons-file-code-16: `mkdocs.yml`&quot;
+
+    ``` yaml
+    extra_css:
+      - stylesheets/extra.css
+    ```
+
+This will render annotations with a larger width:
+
+&lt;div style=&quot;--md-tooltip-width: 600px;&quot; markdown&gt;
+
+``` yaml
+# (1)!
+</code></pre>
+
+
+1. Muuuuuuuuuuuuuuuch more space for content
+
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

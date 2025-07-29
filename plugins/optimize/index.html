@@ -1,0 +1,1189 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crearobotics.github.io/PRIMO-Docs/plugins/optimize/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Built-in optimize plugin - PRIMO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#built-in-optimize-plugin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PRIMO" class="md-header__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRIMO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Built-in optimize plugin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cos_e_la_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fondamenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../struttura_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Struttura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../componenti_primo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Componenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../controllo_robot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Controllo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione_avanzata/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione Avanzata
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../approfondimenti/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Approfondimenti
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PRIMO" class="md-nav__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    PRIMO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cos_e_la_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fondamenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../struttura_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struttura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../componenti_primo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../controllo_robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione_avanzata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione Avanzata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approfondimenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approfondimenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objective">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to use it
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reporting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="built-in-optimize-plugin">Built-in optimize plugin</h1>
+<p>The optimize plugin automatically identifies and optimizes all media files when
+<a href="../../creating-your-site/#building-your-site">building your project</a> by using common compression and conversion techniques.
+As a result, your site loads significantly faster and yields better rankings in
+search engines.</p>
+<hr />
+<!-- md:sponsors -->
+<p><strong>Sponsors only</strong> – this plugin is currently reserved to
+<a href="../../insiders/">our awesome sponsors</a>.</p>
+<h2 id="objective">Objective</h2>
+<h3 id="how-it-works">How it works</h3>
+<p>The plugin scans the [<code>docs</code> directory][mkdocs.docs_dir] for media files and
+assets, optimizing them automatically in order to reduce the final size of the
+[<code>site</code> directory][mkdocs.site_dir]. This leads to faster loading times as you
+ship less bytes to your users, as well as a smaller download for
+<a href="../../setup/building-for-offline-usage/">offline-capable documentation</a>.</p>
+<p>Optimized images are <a href="../requirements/caching/">intelligently cached</a>, which is why
+the plugin will only optimize media files that changed since the last build.
+This makes it possible to swap out or update images, without having to worry
+about optimizing them, or even worse, forgetting to do so.</p>
+<p>In order to optimize media files, a few <a href="#configuration">dependencies</a> need to be available on
+your system.</p>
+<h3 id="when-to-use-it">When to use it</h3>
+<p>It's generally recommended to use the plugin, as media files are optimized
+automatically without the need for intervention, ensuring that your site loads
+as fast as possible. Optimized media files are one of the key components for a
+high and consistent ranking in search engines.</p>
+<p>Additionally, the plugin can be combined with other built-in plugins
+that Material for MkDocs offers, in order to create sophisticated
+build pipelines tailored to your project:</p>
+<div class="grid cards" markdown>
+
+-   :material-shield-account: &nbsp; __[Built-in privacy plugin][privacy]__
+
+    ---
+
+    The privacy plugin makes it easy to use unoptimized external assets, passing
+    them to the optimize plugin before copying them to the [`site` directory]
+    [mkdocs.site_dir].
+
+    ---
+
+    __External media files can be automatically downloaded and optimized__
+
+-   :material-connection: &nbsp; __[Built-in offline plugin][offline]__
+
+    ---
+
+    The offline plugin adds support for building offline-capable documentation,
+    so you can distribute the [`site` directory][mkdocs.site_dir] as a `.zip`
+    file that can be downloaded.
+
+    ---
+
+    __Your documentation can be distributed as a smaller `.zip` download__
+
+</div>
+
+<h2 id="configuration">Configuration</h2>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:plugin [optimize] – built-in -->
+<!-- md:flag multiple -->
+<!-- md:flag experimental -->
+
+<p>As with all <a href="../">built-in plugins</a>, getting started with the optimize plugin is
+straightforward. Just add the following lines to <code>mkdocs.yml</code>, and observe how
+media files are optimized automatically:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize
+</code></pre>
+<p>The optimize plugin is built into Material for MkDocs and doesn't need to be
+installed.</p>
+<p>However, in order to optimize all media files, it's necessary to install the
+dependencies for <a href="../requirements/image-processing/">image processing</a>, if they're not already available on your
+system. The linked guide includes instructions for several operating systems
+and mentions some alternative environments.</p>
+<h3 id="general">General</h3>
+<p>The following settings are available:</p>
+<hr />
+<h4 id="_1"><!-- md:setting config.enabled --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to enable or disable the plugin when <a href="../../creating-your-site/#building-your-site">building your project</a>.
+If you want to disable the plugin, e.g., for local builds, you can use an
+[environment variable][mkdocs.env] in <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      enabled: !ENV [CI, false]
+</code></pre>
+<p>This configuration enables the plugin only during continuous integration (CI).</p>
+<hr />
+<h4 id="_2"><!-- md:setting config.concurrency --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default available CPUs - 1 -->
+
+<p>With more CPUs available, the plugin can do more work in parallel, and thus
+complete media file optimization faster. If you want to disable concurrent
+processing completely, use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      concurrency: 1
+</code></pre>
+<p>By default, the plugin uses all available CPUs - 1 with a minimum of 1.</p>
+<h3 id="caching">Caching</h3>
+<p>The plugin implements an <a href="../requirements/caching/">intelligent caching</a> mechanism, ensuring that a media
+file or asset is only passed through the optimization pipeline when its contents
+change. If you swap out or update an image, the plugin detects it and updates
+the optimized version of the media file.</p>
+<p>The following settings are available for caching:</p>
+<hr />
+<h4 id="_3"><!-- md:setting config.cache --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to instruct the plugin to bypass the cache, in order to
+re-optimize all media files, even though the cache may not be stale. It's
+normally not necessary to specify this setting, except for when debugging
+the plugin itself. Caching can be disabled with:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      cache: false
+</code></pre>
+<hr />
+<h4 id="_4"><!-- md:setting config.cache_dir --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `.cache/plugin/optimize` -->
+
+<p>It is normally not necessary to specify this setting, except for when you want
+to change the path within your root directory where media files are cached.
+If you want to change it, use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      cache_dir: my/custom/dir
+</code></pre>
+<p>If you're using <a href="../#multiple-instances">multiple instances</a> of the plugin, it can be a good idea to
+set different cache directories for both instances, so that they don't interfere
+with each other.</p>
+<h3 id="optimization">Optimization</h3>
+<p>Documentation often makes use of screenshots or diagrams for better
+visualization of things, both of which are prime candidates for optimization.
+The plugin automatically optimizes images using <a href="https://pngquant.org/">pngquant</a> for <code>.png</code> files,
+and <a href="https://pillow.readthedocs.io/">Pillow</a> for <code>.jpg</code> files.</p>
+<p>The following settings are available for optimization:</p>
+<hr />
+<h4 id="_5"><!-- md:setting config.optimize --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.41.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to enable or disable media file optimization. Currently,
+the plugin's sole purpose is to optimize media files, so it's equivalent to the
+[<code>enabled</code>][config.enabled] setting, but in the near future, other features
+might be added. If you want to disable optimization, use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      optimize: false
+</code></pre>
+<hr />
+<h4 id="_6"><!-- md:setting config.optimize_png --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to enable or disable the optimization of <code>.png</code> files. It's
+normally not necessary to specify this setting, but if you want to disable
+the optimization of <code>.png</code> files, use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      optimize_png: false
+</code></pre>
+<hr />
+<h4 id="_7"><!-- md:setting config.optimize_png_speed --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `3` of `1-10` -->
+
+<p>Use this setting to specify the speed/quality tradeoff that <a href="https://pngquant.org/">pngquant</a> applies
+when optimizing <code>.png</code> files. The lower the number, the more aggressively
+<a href="https://pngquant.org/">pngquant</a> will try to optimize:</p>
+<p>=== "Slower <small>smaller</small>"</p>
+<pre><code>``` yaml
+plugins:
+  - optimize:
+      optimize_png_speed: 1
+```
+</code></pre>
+<p>=== "Faster <small>larger</small>"</p>
+<pre><code>``` yaml
+plugins:
+  - optimize:
+      optimize_png_speed: 10
+```
+</code></pre>
+<p>A factor of <code>10</code> has 5% lower quality, but is 8x faster than the default <code>3</code>.</p>
+<hr />
+<h4 id="_8"><!-- md:setting config.optimize_png_strip --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to specify whether <a href="https://pngquant.org/">pngquant</a> should strip optional metadata
+from <code>.png</code> files that are not required to display the image, e.g., <a href="https://en.wikipedia.org/wiki/Exif">EXIF</a>.
+If you want to preserve metadata, use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      optimize_png_strip: false
+</code></pre>
+<hr />
+<h4 id="_9"><!-- md:setting config.optimize_jpg --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to enable or disable the optimization of <code>.jpg</code> files. It's
+normally not necessary to specify this setting, but if you want to disable
+the optimization of <code>.jpg</code> files, use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      optimize_jpg: false
+</code></pre>
+<hr />
+<h4 id="_10"><!-- md:setting config.optimize_jpg_quality --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `60` of `0-100` -->
+
+<p>Use this setting to specify the image quality that <a href="https://pillow.readthedocs.io/">Pillow</a> applies when
+optimizing <code>.jpg</code> files. If the images look blurry, it's a good idea to
+fine-tune and change this setting:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      optimize_jpg_quality: 75
+</code></pre>
+<hr />
+<h4 id="_11"><!-- md:setting config.optimize_jpg_progressive --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to specify whether <a href="https://pillow.readthedocs.io/">Pillow</a> should use progressive encoding
+when optimizing <code>.jpg</code> files, rendering faster on slow connections. If you want
+to disable progressive encoding, use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      optimize_jpg_progressive: false
+</code></pre>
+<hr />
+<h4 id="_12"><!-- md:setting config.optimize_include --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.41.0 -->
+<!-- md:default none -->
+
+<p>Use this setting to enable media file optimization for specific directories
+of your project, e.g., when using <a href="../#multiple-instances">multiple instances</a> of the plugin to optimize
+media files differently:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      optimize_include:
+        - screenshots/*
+</code></pre>
+<p>This configuration enables optimization for all media files that are contained
+in the <code>screenshots</code> folder and its subfolders inside the [<code>docs</code> directory]
+[mkdocs.docs_dir].</p>
+<hr />
+<h4 id="_13"><!-- md:setting config.optimize_exclude --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.41.0 -->
+<!-- md:default none -->
+
+<p>Use this setting to disable media file optimization for specific directories
+of your project, e.g., when using <a href="../#multiple-instances">multiple instances</a> of the plugin to optimize
+media files differently:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      optimize_exclude:
+        - vendor/*
+</code></pre>
+<p>This configuration disables optimization for all media files that are contained
+in the <code>vendor</code> folder and its subfolders inside the [<code>docs</code> directory]
+[mkdocs.docs_dir].</p>
+<h3 id="reporting">Reporting</h3>
+<p>The following settings are available for reporting:</p>
+<hr />
+<h4 id="_14"><!-- md:setting config.print_gain --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to control whether the plugin should print the number of bytes
+gained after optimizing each file. If you want to disable this behavior, use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      print_gain: false
+</code></pre>
+<hr />
+<h4 id="_15"><!-- md:setting config.print_gain_summary --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.29.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to control whether the plugin should print the total number of
+bytes gained after optimizing all files. If you want to disable this behavior,
+use:</p>
+<pre><code class="language-yaml">plugins:
+  - optimize:
+      print_gain_summary: false
+</code></pre>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

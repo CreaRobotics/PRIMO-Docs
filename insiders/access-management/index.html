@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crearobotics.github.io/PRIMO-Docs/insiders/access-management/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Access management - PRIMO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#access-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PRIMO" class="md-header__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRIMO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Access management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cos_e_la_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fondamenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../struttura_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Struttura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../componenti_primo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Componenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../controllo_robot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Controllo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione_avanzata/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione Avanzata
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../approfondimenti/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Approfondimenti
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PRIMO" class="md-nav__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    PRIMO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cos_e_la_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fondamenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../struttura_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struttura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../componenti_primo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../controllo_robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione_avanzata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione Avanzata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approfondimenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approfondimenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to get access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to get access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#individuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individuals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterprises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprises
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrictions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Restrictions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collaborators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaborators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bot-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bot account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expired-invitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expired invitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Team management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outside-collaborators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outside collaborators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirroring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mirroring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub alternatives
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="access-management">Access management</h1>
+<p>The Material for MkDocs Insiders repository is a private repository hosted on
+GitHub and access is, therefore, managed through GitHub. This section covers
+everything you need to know in order to gain access to the private Material for
+MkDocs Insiders repository.</p>
+<h2 id="how-to-get-access">How to get access</h2>
+<p>As the private Material for MkDocs Insiders repository is hosted on GitHub, you
+require a GitHub account to become a sponsor and to gain access. After
+sponsoring us on one of our <a href="../sponsoring-tiers/">sponsoring tiers</a> starting at <a href="https://github.com/sponsors/squidfunk/sponsorships?tier_id=210638">$15 a month</a>,
+you'll get access to the private Insiders repository.</p>
+<p>Please note that the process of gaining access is only partially automatable due
+to technical reasons. Depending on the type of account you've used to become a
+sponsor, we might need more information from you before we can grant access.</p>
+<h3 id="individuals">Individuals</h3>
+<p>If you sponsor using a <a href="https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#personal-accounts">personal account</a>, you will receive an invitation link
+via email to the private Material for MkDocs Insiders repository immediately
+after initiating your sponsorship. This link is <a href="#expired-invitations">valid for seven days</a>. Once you
+accept the invitation, you'll be ready to <a href="../getting-started/">get started</a>.</p>
+<p>If the link expired, please contact us at sponsors@squidfunk.com and we'll
+send you a new one.</p>
+<h3 id="organizations">Organizations</h3>
+<p>When sponsoring using an <a href="https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#organization-accounts">organization account</a>, GitHub will not send an
+automated invitation via email to access the private Material for MkDocs Insiders
+repository. Due to <a href="#collaborators">GitHub limitations</a>, granting access to a private repository
+for an entire organization is not possible.</p>
+<p>Therefore, please contact us at sponsors@squidfunk.com with the name of a
+<a href="https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#personal-accounts">personal account</a> or the name of a <a href="#bot-account">bot account</a> that is publicly or privately
+listed as an owner of your GitHub organization after you received a confirmation
+that your sponsorship was initiated.</p>
+<p>We will add this designated account as a collaborator, and once the invitation
+is <a href="#expired-invitations">accepted within seven days</a>, your organization will be all set to <a href="../getting-started/">get
+started</a>.</p>
+<h3 id="enterprises">Enterprises</h3>
+<p>If you would like to sponsor us using an <a href="https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#enterprise-accounts">enterprise account</a>, we recommend
+using a <a href="https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#personal-accounts">personal account</a> or a <a href="#bot-account">bot account</a> to initiate the sponsorship and
+access the private Material for MkDocs Insiders repository using this account.</p>
+<h2 id="restrictions">Restrictions</h2>
+<p>GitHub sets limitations beyond our control, which is why we require further
+information regarding <a href="#collaborators">collaborators</a> of private repositories and <a href="#matching">matching</a> of
+GitHub accounts.</p>
+<h3 id="collaborators">Collaborators</h3>
+<p>GitHub policy limits access to <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository">private repositories</a> to <a href="https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#personal-accounts">personal accounts</a>
+only, which is why it is currently not possible for us to add <a href="https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#organization-accounts">organization
+accounts</a> to the Material for MkDocs Insiders repository – a private
+repository.</p>
+<p>As much as we would love to give each member of your organization access, it's
+simply not feasible for us to add each member account, which is why every
+<a href="../sponsoring-tiers/">sponsoring tier</a> is limited to one seat. However, you can use a <a href="#bot-account">bot account</a>
+to work around this limitation.</p>
+<h3 id="matching">Matching</h3>
+<p>Due to privacy reasons, GitHub does not allow email addresses to be matched with
+GitHub accounts. When requesting access via email at sponsors@squidfunk.com,
+it's necessary to provide us with the name of a <a href="https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#personal-accounts">personal account</a>.</p>
+<h2 id="bot-account">Bot account</h2>
+<p>Given that only personal accounts can be listed as collaborators on
+<a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository">private repositories</a>, ensuring access for an entire organization requires
+coordination through individuals. Changes within the team could lead to losing
+access to the entire organization.</p>
+<p>To avoid this, you have the option to create a bot account, which is
+<a href="https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github">a new personal account</a> that does not belong to a specific individual but is
+publicly or privately listed as the owner of the GitHub organization</p>
+<p>Using a bot account for access management and initiating your <a href="../privacy/#public-sponsors">public</a> or
+<a href="../privacy/#private-sponsors">private</a> sponsorship through it also allows for better attribution of
+sponsorship costs, allowing you to manage access and payment for all
+sponsorships through a single account, and is thus recommended.</p>
+<h2 id="expired-invitations">Expired invitations</h2>
+<p>The invitation to the private Material for MkDocs is valid for seven days, a
+limitation imposed by GitHub. If invitations are not accepted within this
+period, you'll need to contact us via mail at sponsors@squidfunk.com, and we
+will re-issue the invitation immediately.</p>
+<h2 id="team-management">Team management</h2>
+<p>If you are using Material for MkDocs Insiders as an <a href="#individuals">individual</a> and don't
+collaborate with other users, <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">forking</a> the private repository is not necessary.
+However, when working with a team, it is not possible to simply share your
+collaborator status with other accounts. Therefore, in order to work in a team,
+the account with access to Insiders can <a href="#forking">fork</a>, <a href="#cloning">clone</a>, or <a href="#mirroring">mirror</a> the private
+Material for MkDocs Insiders repository to an organization, providing a pathway
+for team collaboration.</p>
+<h3 id="outside-collaborators">Outside collaborators</h3>
+<p>When working with outside collaborators, you should know that the Insiders
+edition is compatible with the community edition. All new features and
+configuration options are backward-compatible or implemented behind feature
+flags. Most Insiders features enhance the overall experience, e.g., by creating
+better social cards or instant previews. While these features add value for your
+site's users, they are most certainly not necessary for previewing your site.</p>
+<p>This means that outside collaborators can build the documentation locally with
+the community edition, and when they push their changes, your CI pipeline will
+build it with Insiders. When using <a href="../../plugins/">built-in plugins</a> exclusive to Insiders, we
+recommend using the <a href="../../plugins/group/">group</a> plugin.</p>
+<p>See the <a href="../getting-started/">getting started guide</a> for more information.</p>
+<h3 id="forking">Forking</h3>
+<p><a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">Forking</a> a repository creates a copy of the repository that allows for
+independent development while maintaining a link to the original repository
+for updates.</p>
+<h3 id="cloning">Cloning</h3>
+<p><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">Cloning</a> a repository copies the repository to your local machine or codespace,
+facilitating offline work and content management. You can, of course, also
+<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#cloning-your-forked-repository">clone a private fork</a>.</p>
+<h3 id="mirroring">Mirroring</h3>
+<p><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository">Mirroring</a> a repository creates an identical copy, ensuring you have the
+flexibility to host and work with the repository <a href="#github-alternatives">in other environments</a> besides
+GitHub. This is a particularly useful strategy for organizations hosting their
+repositories in a private environment outside of GitHub.</p>
+<h2 id="github-alternatives">GitHub alternatives</h2>
+<p>Material for MkDocs Insiders is designed to be compatible with various
+repository hosting platforms, including GitLab. The key requirement is still a
+GitHub account, as we use GitHub Sponsors for transactions and GitHub to manage access to the private Insiders repository.</p>
+<p>Once you've become a sponsor and secured access to the private Insiders
+repository via an individual GitHub account, you can <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository-in-another-location">mirror the repository in
+another location</a>. This mirroring process not only allows for easy integration
+into your existing workflow but also ensures that your projects stay up-to-date
+with the latest features and improvements of Insiders.</p>
+<p>Our discussion board is a valuable resource for any questions about integrating
+Material for MkDocs Insiders into your projects. It offers a space to connect
+with others who may have similar requirements and setups, as well as to
+exchange tips and explore solutions together.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

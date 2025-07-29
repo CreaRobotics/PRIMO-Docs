@@ -1,0 +1,844 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crearobotics.github.io/PRIMO-Docs/conventions/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Conventions - PRIMO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conventions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PRIMO" class="md-header__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRIMO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conventions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cos_e_la_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fondamenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../struttura_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Struttura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../componenti_primo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Componenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../controllo_robot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Controllo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../programmazione/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../programmazione_avanzata/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione Avanzata
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../approfondimenti/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Approfondimenti
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PRIMO" class="md-nav__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    PRIMO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cos_e_la_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fondamenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../struttura_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struttura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../componenti_primo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controllo_robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programmazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programmazione_avanzata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione Avanzata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approfondimenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approfondimenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Symbols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sponsors-only-data-toc-labelsponsors-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Sponsors only { data-toc-label="Sponsors only" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-data-toc-labelversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Version { data-toc-label="Version" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-insiders-data-toc-labelversion-insiders" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Version (Insiders) { data-toc-label="Version (Insiders)" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-value-default-data-toc-labeldefault-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Default value { #default data-toc-label="Default value" }
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="– Default value { #default data-toc-label=&#34;Default value&#34; }">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-value-is-computed-default-data-toc-labelis-computed" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Default value is computed { #default data-toc-label="is computed" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-value-is-empty-default-data-toc-labelis-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Default value is empty { #default data-toc-label="is empty" }
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-property-metadata-data-toc-labelmetadata-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Metadata property { #metadata data-toc-label="Metadata property" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-instances-multiple-instances-data-toc-labelmultiple-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Multiple instances { #multiple-instances data-toc-label="Multiple instances" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-feature-feature-data-toc-labeloptional-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Optional feature { #feature data-toc-label="Optional feature" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-data-toc-labelexperimental" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Experimental { data-toc-label="Experimental" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-data-toc-labelplugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Plugin { data-toc-label="Plugin" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown-extension-data-toc-labelmarkdown-extension-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Markdown extension { data-toc-label="Markdown extension" #extension }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-value-required-data-toc-labelrequired-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Required value { #required data-toc-label="Required value" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customization-customization-data-toc-labelcustomization" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Customization { #customization data-toc-label="Customization" }
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-data-toc-labelutility" class="md-nav__link">
+    <span class="md-ellipsis">
+      – Utility { data-toc-label="Utility" }
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="conventions">Conventions</h1>
+<p>This section explains several conventions used in this documentation.</p>
+<h2 id="symbols">Symbols</h2>
+<p>This documentation use some symbols for illustration purposes. Before you read
+on, please make sure you've made yourself familiar with the following list of
+conventions:</p>
+<h3 id="sponsors-only-data-toc-labelsponsors-only"><!-- md:sponsors --> – Sponsors only { data-toc-label="Sponsors only" }</h3>
+<p>The pumping heart symbol denotes that a specific feature or behavior is only
+available to sponsors via <a href="../insiders/">Insiders</a>. Make sure that you have access to
+<a href="../insiders/">Insiders</a> if you want to use the feature.</p>
+<h3 id="version-data-toc-labelversion"><!-- md:version --> – Version { data-toc-label="Version" }</h3>
+<p>The tag symbol in conjunction with a version number denotes when a specific
+feature or behavior was added. Make sure you're at least on this version
+if you want to use it.</p>
+<h3 id="version-insiders-data-toc-labelversion-insiders"><!-- md:version insiders- --> – Version (Insiders)  { data-toc-label="Version (Insiders)" }</h3>
+<p>The tag symbol with a heart in conjunction with a version number denotes that a
+specific feature or behavior was added to the <a href="../insiders/">Insiders</a> version of Material for
+MkDocs.</p>
+<h3 id="default-value-default-data-toc-labeldefault-value"><!-- md:default --> – Default value { #default data-toc-label="Default value" }</h3>
+<p>Some properties in <code>mkdocs.yml</code> have default values for when the author does not
+explicitly define them. The default value of the property is always included.</p>
+<h4 id="default-value-is-computed-default-data-toc-labelis-computed"><!-- md:default computed --> – Default value is computed { #default data-toc-label="is computed" }</h4>
+<p>Some default values are not set to static values but computed from other values,
+like the site language, repository provider, or other settings.</p>
+<h4 id="default-value-is-empty-default-data-toc-labelis-empty"><!-- md:default none --> – Default value is empty { #default data-toc-label="is empty" }</h4>
+<p>Some properties do not contain default values. This means that the functionality
+that is associated with them is not available unless explicitly enabled.</p>
+<h3 id="metadata-property-metadata-data-toc-labelmetadata-property"><!-- md:flag metadata --> – Metadata property { #metadata data-toc-label="Metadata property" }</h3>
+<p>This symbol denotes that the thing described is a metadata property, which can
+be used in Markdown documents as part of the front matter definition.</p>
+<h3 id="multiple-instances-multiple-instances-data-toc-labelmultiple-instances"><!-- md:flag multiple --> – Multiple instances { #multiple-instances data-toc-label="Multiple instances" }</h3>
+<p>This symbol denotes that the plugin supports multiple instances, i.e, that it
+can be used multiple times in the <code>plugins</code> setting in <code>mkdocs.yml</code>.</p>
+<h3 id="optional-feature-feature-data-toc-labeloptional-feature"><!-- md:feature --> – Optional feature { #feature data-toc-label="Optional feature" }</h3>
+<p>Most of the features are hidden behind feature flags, which means they must
+be explicitly enabled via <code>mkdocs.yml</code>. This allows for the existence of
+potentially orthogonal features.</p>
+<h3 id="experimental-data-toc-labelexperimental"><!-- md:flag experimental --> – Experimental { data-toc-label="Experimental" }</h3>
+<p>Some newer features are still considered experimental, which means they might
+(although rarely) change at any time, including their complete removal (which
+hasn't happened yet).</p>
+<h3 id="plugin-data-toc-labelplugin"><!-- md:plugin --> – Plugin { data-toc-label="Plugin" }</h3>
+<p>Several features are implemented through MkDocs excellent plugin architecture,
+some of which are built-in and distributed with Material for MkDocs, so no
+installation is required.</p>
+<h3 id="markdown-extension-data-toc-labelmarkdown-extension-extension"><!-- md:extension --> – Markdown extension { data-toc-label="Markdown extension" #extension }</h3>
+<p>This symbol denotes that the thing described is a Markdown extension, which can
+be enabled in <code>mkdocs.yml</code> and adds additional functionality to the Markdown
+parser.</p>
+<h3 id="required-value-required-data-toc-labelrequired-value"><!-- md:flag required --> – Required value { #required data-toc-label="Required value" }</h3>
+<p>Some (very few in fact) properties or settings are required, which means the
+authors must explicitly define them.</p>
+<h3 id="customization-customization-data-toc-labelcustomization"><!-- md:flag customization --> – Customization { #customization data-toc-label="Customization" }</h3>
+<p>This symbol denotes that the thing described is a customization that must be
+added by the author.</p>
+<h3 id="utility-data-toc-labelutility"><!-- md:utility --> – Utility { data-toc-label="Utility" }</h3>
+<p>Besides plugins, there are some utilities that build on top of MkDocs in order
+to provide extended functionality, like for example support for versioning.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

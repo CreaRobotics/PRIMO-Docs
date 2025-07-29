@@ -1,0 +1,1025 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crearobotics.github.io/PRIMO-Docs/setup/setting-up-tags/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Setting up tags - PRIMO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setting-up-tags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PRIMO" class="md-header__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRIMO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setting up tags
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cos_e_la_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fondamenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../struttura_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Struttura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../componenti_primo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Componenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../controllo_robot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Controllo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione_avanzata/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione Avanzata
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../approfondimenti/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Approfondimenti
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PRIMO" class="md-nav__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    PRIMO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cos_e_la_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fondamenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../struttura_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struttura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../componenti_primo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../controllo_robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione_avanzata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione Avanzata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approfondimenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approfondimenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in-tags-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in tags plugin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built-in tags plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag-icons-and-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag icons and identifiers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-tags-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a tags index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurable-listings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurable listings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoped-listings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scoped listings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadow-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shadow tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested tags
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hiding-tags-on-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hiding tags on a page
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="setting-up-tags">Setting up tags</h1>
+<p>Material for MkDocs adds first-class support for categorizing pages with tags,
+which adds the possibility to group related pages and make them discoverable
+via search and a dedicated <a href="#adding-a-tags-index">tags index</a>. If your documentation is large, tags
+can help to discover relevant information faster.</p>
+<h2 id="configuration">Configuration</h2>
+<h3 id="built-in-tags-plugin">Built-in tags plugin</h3>
+<!-- md:version 8.2.0 -->
+<!-- md:plugin -->
+
+<p>The built-in tags plugin adds the ability to categorize any page with tags
+as part of the front matter of the page. In order to add support for tags, add
+the following lines to <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">plugins:
+  - tags
+</code></pre>
+<p>For a list of all settings, please consult the <a href="../../plugins/tags/">plugin documentation</a>.</p>
+<h4 id="advanced-settings">Advanced settings</h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.48.0 -->
+<!-- md:flag experimental -->
+
+<p>The following advanced settings are currently reserved to our <a href="../../insiders/">sponsors</a>. They are entirely optional, and only add additional capabilities to
+the tags plugin:</p>
+<!-- - [`listings_layout`][config.listings_layout] -->
+<ul>
+<li><a href="../../plugins/tags/#config.listings_toc"><code>listings_toc</code></a></li>
+</ul>
+<p>We'll add more settings here in the near future.</p>
+<h3 id="tag-icons-and-identifiers">Tag icons and identifiers</h3>
+<!-- md:version 8.5.0 -->
+<!-- md:flag experimental -->
+<!-- md:example tags-with-icons -->
+
+<p>Each tag can be associated with an icon, which is then rendered inside the tag.
+Before assigning icons to tags, associate each tag with a unique identifier,
+by adding the following to <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">extra:
+  tags:
+    &lt;tag&gt;: &lt;identifier&gt; # (1)!
+</code></pre>
+<ol>
+<li>
+<p>The identifier can only include alphanumeric characters, as well as dashes
+    and underscores. For example, if you have a tag <code>Compatibility</code>, you can
+    set <code>compat</code> as an identifier:</p>
+<p><code>yaml
+extra:
+  tags:
+    Compatibility: compat</code></p>
+<p>Identifiers can be reused between tags. Tags which are not explicitly
+associated will use the default tag icon which is :material-pound:</p>
+</li>
+</ol>
+<p>Next, each identifier can be associated with an icon, even a <a href="../changing-the-logo-and-icons/#additional-icons">custom icon</a>, by
+adding the following lines to <code>mkdocs.yml</code> under the <code>theme.icon</code> configuration
+setting:</p>
+<p>=== "Tag icon"</p>
+<pre><code>``` yaml
+theme:
+  icon:
+    tag:
+      &lt;identifier&gt;: &lt;icon&gt; # (1)!
+```
+
+1.  Enter a few keywords to find the perfect icon using our [icon search] and
+    click on the shortcode to copy it to your clipboard:
+
+    &lt;div class="mdx-iconsearch" data-mdx-component="iconsearch"&gt;
+      &lt;input class="md-input md-input--stretch mdx-iconsearch__input" placeholder="Search icon" data-mdx-component="iconsearch-query" value="tag" /&gt;
+      &lt;div class="mdx-iconsearch-result" data-mdx-component="iconsearch-result" data-mdx-mode="file"&gt;
+        &lt;div class="mdx-iconsearch-result__meta"&gt;&lt;/div&gt;
+        &lt;ol class="mdx-iconsearch-result__list"&gt;&lt;/ol&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+<p>=== "Tag default icon"</p>
+<pre><code>``` yaml
+theme:
+  icon:
+    tag:
+      default: &lt;icon&gt;
+```
+</code></pre>
+<p>??? example "Expand to inspect example"</p>
+<pre><code>``` yaml
+theme:
+  icon:
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+extra:
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
+```
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="adding-tags">Adding tags</h3>
+<!-- md:version 8.2.0 -->
+<!-- md:example tags -->
+
+<p>When the <a href="../../plugins/tags/">built-in tags plugin</a> is enabled, tags can be added for a document
+with the front matter <code>tags</code> property. Add the following lines at the top of a
+Markdown file:</p>
+<pre><code class="language-sh">---
+tags:
+  - HTML5
+  - JavaScript
+  - CSS
+---
+
+...
+</code></pre>
+<p>The page will now render with those tags above the main headline and within the
+search preview, which now allows to <strong>find pages by tags</strong>.</p>
+<p>??? question "How to set tags for an entire folder?"</p>
+<pre><code>With the help of the [built-in meta plugin], you can ensure that tags are
+set for an entire section and all nested pages, by creating a `.meta.yml`
+file in the corresponding folder with the following content:
+
+``` yaml
+tags:
+  - HTML5
+  - JavaScript
+  - CSS
+```
+
+The tags set in `.meta.yml` are merged and deduplicated with the tags
+defined for a page, which means you can define common tags in `.meta.yml`
+and then add specific tags for each page. The tags in `.meta.yml` are
+appended.
+</code></pre>
+<h3 id="adding-a-tags-index">Adding a tags index</h3>
+<!-- md:version 8.2.0 -->
+<!-- md:example tags -->
+
+<p>The <a href="../../plugins/tags/">built-in tags plugin</a> allows to define a file to render a tags index,
+which can be any page that is part of the <code>nav</code> section. To add a tags index,
+create a page, e.g. <code>tags.md</code>:</p>
+<pre><code class="language-markdown"># Tags
+
+Following is a list of relevant tags:
+
+&lt;!-- material/tags --&gt;
+</code></pre>
+<p>The tags marker specifies the position of the tags index, i.e. it is
+replaced with the actual tags index when the page is rendered. You can include
+arbitrary content before and after the marker:</p>
+<p><a href="../../assets/screenshots/tags-index.png"><img alt="Tags index" src="../../assets/screenshots/tags-index.png" /></a></p>
+<h3 id="advanced-features">Advanced features</h3>
+<p><a href="../../insiders/">Insiders</a> ships a <strong>ground up rewrite of the tags plugin</strong> which is infinitely
+more powerful than the current version in the community edition. It allows
+for an arbitrary number of tags indexes (listings), <a href="#scoped-listings">scoped listings</a>,
+<a href="#shadow-tags">shadow tags</a>, <a href="#nested-tags">nested tags</a>, and much more.</p>
+<h4 id="configurable-listings">Configurable listings</h4>
+<!-- md:version 9.6.0 -->
+<!-- md:flag experimental -->
+
+<p>Listings can be configured in <code>mkdocs.yml</code> or directly at the location of the
+marker that you position in a Markdown document. Some examples:</p>
+<ul>
+<li>
+<p><strong>Use <a href="#scoped-listings">scoped listings</a></strong>: limit the tags index to pages that are on the same
+  level of the subsection of the documentation the page is in:</p>
+<p><code>html
+&lt;!-- material/tags { scope: true } --&gt;</code></p>
+</li>
+<li>
+<p><strong>List only specific tags</strong>: limit the tags index to a single or multiple
+  selected tags, e.g., <code>Foo</code> and <code>Bar</code>, excluding all other tags:</p>
+<p><code>html
+&lt;!-- material/tags { include: [Foo, Bar] } --&gt;</code></p>
+</li>
+<li>
+<p><strong>Exclude pages with specific tags</strong>: don't include pages that are tagged
+  with specific tags, e.g. <code>Internal</code>. This can be any tag, including a shadow
+  tag:</p>
+<p><code>html
+&lt;!-- material/tags { exclude: [Internal] } --&gt;</code></p>
+</li>
+<li>
+<p><strong>Enable or disable tags inside the table of contents</strong>: specify whether the
+  table of contents lists all tags under the nearest headline:</p>
+<p><code>html
+&lt;!-- material/tags { toc: false } --&gt;</code></p>
+</li>
+</ul>
+<p>See the <a href="../../plugins/tags/#listing-configuration">listing configuration</a> for all options.</p>
+<h4 id="scoped-listings">Scoped listings</h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.48.0 -->
+<!-- md:flag experimental -->
+
+<p>If your documentation is large, you might want to consider using scoped listings
+which will only include pages that are on the same level or below the page
+containing the listing. Just use:</p>
+<pre><code class="language-html">&lt;!-- material/tags { scope: true } --&gt;
+</code></pre>
+<p>If you plan to use multiple scoped indexes, it's a good idea to define a
+listing configuration in <code>mkdocs.yml</code>, which you can then reference by its id:</p>
+<pre><code class="language-yaml">plugins:
+  - tags:
+      listings_map:
+        scoped:
+          scope: true
+</code></pre>
+<p>You can now use:</p>
+<pre><code class="language-html">&lt;!-- material/tags scoped --&gt;
+</code></pre>
+<h4 id="shadow-tags">Shadow tags</h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.48.0 -->
+<!-- md:flag experimental -->
+
+<p>Shadow tags are tags that are solely meant to organization, which can be
+included or excluded for rendering with a simple flag. They can be enumerated
+in the <a href="../../plugins/tags/#config.shadow_tags"><code>shadow_tags</code></a> setting:</p>
+<pre><code class="language-yaml">plugins:
+  - tags:
+      shadow_tags:
+        - Draft
+        - Internal
+</code></pre>
+<p>If a document is tagged with <code>Draft</code>, the tag will only be rendered if
+<a href="../../plugins/tags/#config.shadow"><code>shadow</code></a> setting is enabled, and excluded when it is disabled.
+This is an excellent opportunity for using tags for structuring.</p>
+<h4 id="nested-tags">Nested tags</h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.48.0 -->
+<!-- md:flag experimental -->
+
+<p><a href="../../insiders/">Insiders</a> ships support for nested tags. The
+<a href="../../plugins/tags/#config.tags_hierarchy_separator"><code>tags_hierarchy_separator</code></a> allows to create
+hierarchies of tags, e.g., <code>Foo/Bar</code>. Nested tags will be rendered as children
+of the parent tag:</p>
+<pre><code class="language-yaml">plugins:
+  - tags:
+      tags_hierarchy: true
+</code></pre>
+<h3 id="hiding-tags-on-a-page">Hiding tags on a page</h3>
+<p>While the tags are rendered above the main headline, sometimes, it might be
+desirable to hide them for a specific page, which can be achieved with the
+front matter <code>hide</code> property:</p>
+<pre><code class="language-yaml">---
+hide:
+  - tags
+---
+
+# Page title
+...
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

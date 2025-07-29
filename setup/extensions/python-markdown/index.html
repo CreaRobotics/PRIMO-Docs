@@ -1,0 +1,1001 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crearobotics.github.io/PRIMO-Docs/setup/extensions/python-markdown/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Python Markdown - PRIMO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-markdown" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="PRIMO" class="md-header__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRIMO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python Markdown
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../cos_e_la_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fondamenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../struttura_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Struttura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../componenti_primo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Componenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../controllo_robot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Controllo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../programmazione/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../programmazione_avanzata/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione Avanzata
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../approfondimenti/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Approfondimenti
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="PRIMO" class="md-nav__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    PRIMO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cos_e_la_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fondamenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../struttura_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struttura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../componenti_primo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../controllo_robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmazione_avanzata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione Avanzata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../approfondimenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approfondimenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abbreviations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abbreviations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admonition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admonition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Footnotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown-in-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown in HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#superseded-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Superseded extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Superseded extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fenced-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fenced Code Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codehilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      CodeHilite
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="python-markdown">Python Markdown</h1>
+<p>Material for MkDocs supports a large number of <a href="https://python-markdown.github.io/">Python Markdown</a> extensions,
+which is part of what makes it so attractive for technical writing. Following
+is a list of all supported extensions, linking to the relevant sections of the
+reference for which features they need to be enabled.</p>
+<h2 id="supported-extensions">Supported extensions</h2>
+<h3 id="abbreviations">Abbreviations</h3>
+<!-- md:version 1.0.0 -->
+<!-- md:extension [abbr][Abbreviations] -->
+
+<p>The <a href="https://python-markdown.github.io/extensions/abbreviations/">Abbreviations</a> extension adds the ability to add a small tooltip to an
+element, by wrapping it with an <code>abbr</code> tag. Only plain text (no markup) is
+supported. Enable it via <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - abbr
+</code></pre>
+<p>No configuration options are available. See reference for usage:</p>
+<ul>
+<li><a href="../../../reference/tooltips/#adding-abbreviations">Adding abbreviations</a></li>
+<li><a href="../../../reference/tooltips/#adding-a-glossary">Adding a glossary</a></li>
+</ul>
+<h3 id="admonition">Admonition</h3>
+<!-- md:version 0.1.0 -->
+<!-- md:extension [admonition][Admonition] -->
+
+<p>The <a href="https://python-markdown.github.io/extensions/admonition/">Admonition</a> extension adds support for admonitions, more commonly known as
+<em>call-outs</em>, which can be defined in Markdown by using a simple syntax. Enable
+it via <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - admonition
+</code></pre>
+<p>No configuration options are available. See reference for usage:</p>
+<ul>
+<li><a href="../../../reference/admonitions/#usage">Adding admonitions</a></li>
+<li><a href="../../../reference/admonitions/#changing-the-title">Changing the title</a></li>
+<li><a href="../../../reference/admonitions/#removing-the-title">Removing the title</a></li>
+<li><a href="../../../reference/admonitions/#supported-types">Supported types</a></li>
+</ul>
+<h3 id="attribute-lists">Attribute Lists</h3>
+<!-- md:version 0.1.0 -->
+<!-- md:extension [attr_list][Attribute Lists] -->
+
+<p>The <a href="https://python-markdown.github.io/extensions/attr_list/">Attribute Lists</a> extension allows to add HTML attributes and CSS classes
+to <a href="https://python-markdown.github.io/extensions/attr_list/#limitations">almost every</a> Markdown inline- and block-level
+element with a special syntax. Enable it via <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - attr_list
+</code></pre>
+<p>No configuration options are available. See reference for usage:</p>
+<ul>
+<li><a href="../../../reference/annotations/#usage">Using annotations</a></li>
+<li><a href="../../../reference/grids/#usage">Using grids</a></li>
+<li><a href="../../../reference/buttons/#adding-buttons">Adding buttons</a></li>
+<li><a href="../../../reference/tooltips/#adding-tooltips">Adding tooltips</a></li>
+<li><a href="../../../reference/icons-emojis/#with-colors">Using icons with colors</a></li>
+<li><a href="../../../reference/icons-emojis/#with-animations">Using icons with animations</a></li>
+<li><a href="../../../reference/images/#image-alignment">Image alignment</a></li>
+<li><a href="../../../reference/images/#image-lazy-loading">Image lazy-loading</a></li>
+</ul>
+<h3 id="definition-lists">Definition Lists</h3>
+<!-- md:version 1.1.0 -->
+<!-- md:extension [def_list][Definition Lists] -->
+
+<p>The <a href="https://python-markdown.github.io/extensions/definition_lists/">Definition Lists</a> extension adds the ability to add definition lists (more
+commonly known as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl">description lists</a> – <code>dl</code> in HTML) via Markdown to a
+document. Enable it via <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - def_list
+</code></pre>
+<p>No configuration options are available. See reference for usage:</p>
+<ul>
+<li><a href="../../../reference/lists/#using-definition-lists">Using definition lists</a></li>
+</ul>
+<h3 id="footnotes">Footnotes</h3>
+<!-- md:version 1.0.0 -->
+<!-- md:extension [footnotes][Footnotes] -->
+
+<p>The <a href="https://python-markdown.github.io/extensions/footnotes/">Footnotes</a> extension allows to define inline footnotes, which are then
+rendered below all Markdown content of a document. Enable it via <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - footnotes
+</code></pre>
+<p>No configuration options are supported. See reference for usage:</p>
+<ul>
+<li><a href="../../../reference/footnotes/#adding-footnote-references">Adding footnote references</a></li>
+<li><a href="../../../reference/footnotes/#adding-footnote-content">Adding footnote content</a></li>
+</ul>
+<h3 id="markdown-in-html">Markdown in HTML</h3>
+<!-- md:version 0.1.0 -->
+<!-- md:extension [md_in_html][Markdown in HTML] -->
+
+<p>The <a href="https://python-markdown.github.io/extensions/md_in_html/">Markdown in HTML</a> extension allows for writing Markdown inside of HTML,
+which is useful for wrapping Markdown content with custom elements. Enable it
+via <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - md_in_html
+</code></pre>
+<blockquote>
+<p>By default, Markdown ignores any content within a raw HTML block-level
+element. With the <code>md_in_html</code> extension enabled, the content of a raw HTML
+block-level element can be parsed as Markdown by including a <code>markdown</code>
+attribute on the opening tag. The <code>markdown</code> attribute will be stripped from
+the output, while all other attributes will be preserved.</p>
+</blockquote>
+<p>No configuration options are available. See reference for usage:</p>
+<ul>
+<li><a href="../../../reference/annotations/#usage">Using annotations</a></li>
+<li><a href="../../../reference/grids/#usage">Using grids</a></li>
+<li><a href="../../../reference/images/#image-captions">Image captions</a></li>
+</ul>
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- md:version 0.1.0 -->
+<!-- md:extension [toc][Table of Contents] -->
+
+<p>The <a href="https://python-markdown.github.io/extensions/toc/">Table of Contents</a> extension automatically generates a table of contents
+from a document, which Material for MkDocs will render as part of the resulting
+page. Enable it via <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - toc:
+      permalink: true
+</code></pre>
+<p>The following configuration options are supported:</p>
+<!-- md:option toc.title -->
+
+<p>:   <!-- md:version 7.3.5 --> <!-- md:default computed --> –
+    This option sets the title of the table of contents in the right navigation
+    sidebar, which is normally automatically sourced from the translations for
+    the <a href="../../changing-the-language/#site-language">site language</a> as set in <code>mkdocs.yml</code>:</p>
+<pre><code>``` yaml
+markdown_extensions:
+  - toc:
+      title: On this page
+```
+</code></pre>
+<!-- md:option toc.permalink -->
+
+<p>:   <!-- md:default <code>false</code> --> This option adds an anchor link
+    containing the paragraph symbol <code>¶</code> or another custom symbol at the end of
+    each headline, exactly like on the page you're currently viewing, which
+    Material for MkDocs will make appear on hover:</p>
+<pre><code>=== "¶"
+
+    ``` yaml
+    markdown_extensions:
+      - toc:
+          permalink: true
+    ```
+
+=== "⚓︎"
+
+    ``` yaml
+    markdown_extensions:
+      - toc:
+          permalink: ⚓︎
+    ```
+</code></pre>
+<!-- md:option toc.permalink_title -->
+
+<p>:   <!-- md:default <code>Permanent link</code> --> This option sets the
+    title of the anchor link which is shown on hover and read by screen readers.
+    For accessibility reasons, it might be beneficial to change it to a more
+    discernable name, stating that the anchor links to the section itself:</p>
+<pre><code>``` yaml
+markdown_extensions:
+  - toc:
+      permalink_title: Anchor link to this section for reference
+```
+</code></pre>
+<!-- md:option toc.slugify -->
+
+<p>:   <!-- md:default <code>toc.slugify</code> --> This option allows for
+    customization of the slug function. For some languages, the default may not
+    produce good and readable identifiers – consider using another slug function
+    like for example those from <a href="https://facelessuser.github.io/pymdown-extensions/extras/slugs/">Python Markdown Extensions</a>:</p>
+<pre><code>=== "Unicode"
+
+    ``` yaml
+    markdown_extensions:
+      - toc:
+          slugify: !!python/object/apply:pymdownx.slugs.slugify
+            kwds:
+              case: lower
+    ```
+
+=== "Unicode, case-sensitive"
+
+    ``` yaml
+    markdown_extensions:
+      - toc:
+          slugify: !!python/object/apply:pymdownx.slugs.slugify {}
+    ```
+</code></pre>
+<!-- md:option toc.toc_depth -->
+
+<p>:   <!-- md:default <code>6</code> --> Define the range of levels to be
+    included in the table of contents. This may be useful for project
+    documentation with deeply structured headings to decrease the length of the
+    table of contents, or to remove the table of contents altogether:</p>
+<pre><code>=== "Hide levels 4-6"
+
+    ``` yaml
+    markdown_extensions:
+      - toc:
+          toc_depth: 3
+    ```
+
+=== "Hide table of contents"
+
+    ``` yaml
+    markdown_extensions:
+      - toc:
+          toc_depth: 0
+    ```
+</code></pre>
+<p>The other configuration options of this extension are not officially supported
+by Material for MkDocs, which is why they may yield unexpected results. Use
+them at your own risk.</p>
+<h3 id="tables">Tables</h3>
+<!-- md:version 0.1.0 -->
+<!-- md:extension [tables][Tables] -->
+
+<p>The <a href="https://python-markdown.github.io/extensions/tables/">Tables</a> extension adds the ability to create tables in Markdown by using a
+simple syntax. Enable it via <code>mkdocs.yml</code> (albeit it should be enabled by
+default):</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - tables
+</code></pre>
+<p>No configuration options are available. See reference for usage:</p>
+<ul>
+<li><a href="../../../reference/data-tables/#usage">Using data tables</a></li>
+<li><a href="../../../reference/data-tables/#column-alignment">Column alignment</a></li>
+</ul>
+<h2 id="superseded-extensions">Superseded extensions</h2>
+<p>The following <a href="https://python-markdown.github.io/">Python Markdown</a> extensions are not (or might not be) supported
+anymore, and are therefore not recommended for use. Instead, the alternatives
+should be considered.</p>
+<h3 id="fenced-code-blocks">Fenced Code Blocks</h3>
+<!-- md:version 0.1.0 -->
+<!-- md:extension [fenced_code_blocks][Fenced Code Blocks] -->
+
+<p>Superseded by <a href="https://facelessuser.github.io/pymdown-extensions/extensions/superfences/">SuperFences</a>. This extension might still work, but the
+<a href="https://facelessuser.github.io/pymdown-extensions/extensions/superfences/">SuperFences</a> extension is superior in many ways, as it allows for arbitrary
+nesting, and is therefore recommended.</p>
+<h3 id="codehilite">CodeHilite</h3>
+<!-- md:version 0.1.0 -->
+<!-- md:extension [codehilite][CodeHilite] -->
+
+<p>Superseded by <a href="https://facelessuser.github.io/pymdown-extensions/extensions/highlight/">Highlight</a>. Support for CodeHilite was dropped in</p>
+<!-- md:version 6.0.0 -->
+<p>, as <a href="https://facelessuser.github.io/pymdown-extensions/extensions/highlight/">Highlight</a> has a better integration with other
+essential extensions like <a href="https://facelessuser.github.io/pymdown-extensions/extensions/superfences/">SuperFences</a> and <a href="https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/">InlineHilite</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

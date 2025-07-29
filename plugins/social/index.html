@@ -1,0 +1,1875 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crearobotics.github.io/PRIMO-Docs/plugins/social/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Built-in social plugin - PRIMO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#built-in-social-plugin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PRIMO" class="md-header__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRIMO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Built-in social plugin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cos_e_la_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fondamenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../struttura_robotica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Struttura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../componenti_primo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Componenti
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../controllo_robot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Controllo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programmazione_avanzata/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Programmazione Avanzata
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../approfondimenti/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Approfondimenti
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PRIMO" class="md-nav__button md-logo" aria-label="PRIMO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M352 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-96c-53 0-96 43-96 96v224c0 53 43 96 96 96h256c53 0 96-43 96-96V160c0-53-43-96-96-96h-96zM160 368c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24m120 0c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24M224 176a48 48 0 1 1 0 96 48 48 0 1 1 0-96m144 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-304 0c0-17.7-14.3-32-32-32S0 206.3 0 224v96c0 17.7 14.3 32 32 32s32-14.3 32-32zm544-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32"/></svg>
+
+    </a>
+    PRIMO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cos_e_la_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fondamenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../struttura_robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struttura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../componenti_primo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../controllo_robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione_avanzata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmazione Avanzata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approfondimenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approfondimenti
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objective">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to use it
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#social-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social cards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Social cards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="built-in-social-plugin">Built-in social plugin</h1>
+<p>The social plugin automatically and intelligently generates beautiful and highly
+customizable social cards in different <a href="#layouts">layouts</a> for each page
+of your project, rendering as preview images whenever you or somebody else share
+a link to your project on social media.</p>
+<h2 id="objective">Objective</h2>
+<h3 id="how-it-works">How it works</h3>
+<p>The plugin automatically generates a customizable social card for each page
+of your project, which appears as a preview image when sharing a link to your
+project on social media, without the use of external services and just
+<a href="#configuration">a single line of configuration</a>.</p>
+<p>With the use of an efficient <a href="../requirements/image-processing/">image processing</a> library, the plugin allows to
+define <a href="../../setup/setting-up-social-cards/#customization">custom layouts</a> for social cards, which can be adapted to match your
+project's style and branding. While it would technically be much simpler to
+generate social cards by using a web browser and an automation framework like
+<a href="https://github.com/puppeteer/puppeteer">Puppeteer</a>[^1], it would add further liabilities to your toolchain, with the
+potential to make build pipelines more complex, much more resource intense,
+and significantly slower.</p>
+<p>[^1]:
+    <a href="https://github.blog/2021-06-22-framework-building-open-graph-images/">GitHub wrote in their blog</a> that they use <a href="https://github.com/puppeteer/puppeteer">Puppeteer</a> to generate social
+    card images for repositories, issues, commits, discussions, and basically
+    everything else that appear as preview images when shared on social media.</p>
+<p>The generated social cards are <a href="#caching">cached</a> and stored in the
+[<code>site</code> directory][mkdocs.site_dir], and thus self-hosted, ensuring that your
+project doesn't depend on external services. In order to generate social cards
+images, a few <a href="#configuration">dependencies</a> need to be available on your system.</p>
+<h3 id="when-to-use-it">When to use it</h3>
+<p>There's one particular case when we don't recommend to use the plugin: when you
+build <a href="../../setup/building-for-offline-usage/">offline-capable documentation</a> to offer it as a download. Otherwise, it
+always makes sense to enable the plugin, as links to your documentation shared
+on social media will appear much more appealing.</p>
+<p>Even more interestingly, the plugin can be combined with other built-in plugins
+that Material for MkDocs offers, in order to create sophisticated build
+pipelines tailored to your project:</p>
+<div class="grid cards" markdown>
+
+-   :material-newspaper-variant-outline: &nbsp; __[Built-in blog plugin][blog]__
+
+    ---
+
+    The social plugin automatically generates beautiful and customizable
+    social cards for each post and page, showing as previews on social media.
+
+    ---
+
+    __Links to your blog render beautiful social cards when shared on social media__
+
+-   :material-file-tree: &nbsp; __[Built-in meta plugin][meta]__
+
+    ---
+
+    The meta plugin can be used to [change the layout][meta.social.cards_layout]
+    for social cards or [change specific layout options]
+    [meta.social.cards_layout_options] like [background][option.background_color]
+    or [color][option.color] for a subset of pages.
+
+    ---
+
+    __Your documentation can use completely different social cards per section__
+
+</div>
+
+<h2 id="configuration">Configuration</h2>
+<!-- md:version 8.5.0 -->
+<!-- md:plugin [social] – built-in -->
+<!-- md:flag multiple -->
+<!-- md:flag experimental -->
+
+<p>In order to get started with the social plugin, just add the following lines to
+<code>mkdocs.yml</code>, and observe how Material for MkDocs generates beautiful social
+cards for you:</p>
+<pre><code class="language-yaml">plugins:
+  - social
+</code></pre>
+<p>The social plugin is built into Material for MkDocs and doesn't need to be
+installed.</p>
+<p>However, in order to generate social card images, it's necessary to install the
+dependencies for <a href="../requirements/image-processing/">image processing</a>, if they're not already available on your
+system. The linked guide includes instructions for several operating systems
+and mentions some alternative environments.</p>
+<h3 id="general">General</h3>
+<p>The following settings are available:</p>
+<hr />
+<h4 id="_1"><!-- md:setting config.enabled --></h4>
+<!-- md:version 8.5.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to enable or disable the plugin when <a href="../../creating-your-site/#building-your-site">building your project</a>.
+If you want to disable the plugin, e.g., for local builds, you can use an
+[environment variable][mkdocs.env] in <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      enabled: !ENV [CI, false]
+</code></pre>
+<p>This configuration enables the plugin only during continuous integration (CI).</p>
+<hr />
+<h4 id="_2"><!-- md:setting config.concurrency --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default available CPUs - 1 -->
+
+<p>With more CPUs available, the plugin can do more work in parallel, and thus
+complete social card generation faster. If you want to disable concurrent
+processing completely, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      concurrency: 1
+</code></pre>
+<p>By default, the plugin uses all available CPUs - 1 with a minimum of 1.</p>
+<h3 id="caching">Caching</h3>
+<p>The plugin implements an <a href="../requirements/caching/">intelligent caching</a> mechanism, ensuring that social
+cards are only regenerated when their contents change or they're not already
+contained in the cache. If any of the variables used in a layout changes, the
+plugin detects it and regenerates the social card.</p>
+<p>The following settings are available for caching:</p>
+<hr />
+<h4 id="_3"><!-- md:setting config.cache --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to instruct the plugin to bypass the cache, in order to
+re-generate social cards for all pages, even though the cache may not be stale.
+It's normally not necessary to specify this setting, except for when debugging
+the plugin itself. Caching can be disabled with:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cache: false
+</code></pre>
+<hr />
+<h4 id="_4"><!-- md:setting config.cache_dir --></h4>
+<!-- md:version 8.5.0 -->
+<!-- md:default `.cache/plugin/social` -->
+
+<p>It is normally not necessary to specify this setting, except for when you want
+to change the path within your root directory where social card images are
+cached. If you want to change it, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cache_dir: my/custom/dir
+</code></pre>
+<p>If you're using <a href="../#multiple-instances">multiple instances</a> of the plugin, it can be a good idea to
+set different cache directories for both instances, so that they don't interfere
+with each other.</p>
+<h3 id="logging">Logging</h3>
+<p>The following settings are available for logging:</p>
+<hr />
+<h4 id="_5"><!-- md:setting config.log --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.40.2 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to control whether the plugin should only log errors when
+generating social cards without terminating the build, e.g., invalid references
+to icons. To terminate the build, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      log: false
+</code></pre>
+<hr />
+<h4 id="_6"><!-- md:setting config.log_level --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.40.2 -->
+<!-- md:default `warn` -->
+
+<p>Use this setting to control the log level that the plugin should employ when
+encountering errors, which requires that the [<code>log</code>][config.log] setting is
+enabled. The following log levels are available:</p>
+<p>=== "<code>warn</code>"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      log_level: warn
+```
+
+Errors are reported as warnings, terminating the build in
+[`strict`][mkdocs.strict] mode.
+</code></pre>
+<p>=== "<code>info</code>"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      log_level: info
+```
+
+Errors are only reported as informational messages.
+</code></pre>
+<p>=== "<code>ignore</code>"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      log_level: ignore
+```
+
+Errors are only reported when using the `--verbose` flag.
+</code></pre>
+<h3 id="social-cards">Social cards</h3>
+<p>The following settings are available for social card generation:</p>
+<hr />
+<h4 id="_7"><!-- md:setting config.cards --></h4>
+<!-- md:version 8.5.0 -->
+<!-- md:default `true` -->
+
+<p>Use this setting to enable or disable social card generation. Currently, the
+plugin's sole purpose is to generate social cards, so it's equivalent to the
+[<code>enabled</code>][config.enabled] setting, but in the future, other features might be
+added. If you want to disable social card generation, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards: false
+</code></pre>
+<hr />
+<h4 id="_8"><!-- md:setting config.cards_dir --></h4>
+<!-- md:version 8.5.0 -->
+<!-- md:default `assets/images/social` -->
+
+<p>It is normally not necessary to specify this setting, except for when you want
+to change the path within the [<code>site</code> directory][mkdocs.site_dir] where
+social cards are stored. If you want to change it, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_dir: my/custom/dir
+</code></pre>
+<p>This configuration stores the generated images at <code>my/custom/dir</code> in the
+[<code>site</code> directory][mkdocs.site_dir].</p>
+<hr />
+<h4 id="_9"><!-- md:setting config.cards_layout_dir --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default `layouts` -->
+
+<p>If you want to build a <a href="../../setup/setting-up-social-cards/#customization">custom social card layout</a>, use this
+setting to change the folder where you store your custom layouts, the default
+being a folder called <code>layouts</code> in your root directory:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout_dir: layouts
+</code></pre>
+<p>The provided path is resolved from the root directory.</p>
+<p>!!! tip "Where to store custom layouts"</p>
+<pre><code>Our recommendation is to locate the folder outside of the
+[`docs` directory][mkdocs.docs_dir], to make sure that your [custom layouts]
+are not copied to the [`site` directory][mkdocs.site_dir] when
+[building your project], e.g., by adhering to the following directory
+layout:
+
+``` { .sh .no-copy }
+.
+├─ docs/
+│  └─ *.md
+├─ layouts/
+│  └─ *.yml
+└─ mkdocs.yml
+```
+</code></pre>
+<hr />
+<h4 id="_10"><!-- md:setting config.cards_layout --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default `default` -->
+
+<p>The plugin ships a growing list of <a href="#layouts"><code>default</code> layouts</a> for
+social cards. If you've created a <a href="../../setup/setting-up-social-cards/#customization">custom social card layout</a>,
+you can instruct the plugin to use it exactly as one of the included layouts:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout: my-custom-layout
+</code></pre>
+<p>The provided path is resolved from the[
+<code>layouts</code> directory][config.cards_layout_dir].</p>
+<p>!!! tip "How custom layouts are resolved"</p>
+<pre><code>By default, the plugin will load your [custom layouts] from a folder named
+`layouts` in your root directory. If your layout is called
+`my-custom-layout`, the directory layout must adhere to:
+
+``` { .sh .no-copy }
+.
+├─ docs/
+│  └─ *.md
+├─ layouts/
+│  └─ my-custom-layout.yml
+└─ mkdocs.yml
+```
+</code></pre>
+<hr />
+<h4 id="_11"><!-- md:setting config.cards_layout_options --></h4>
+<!-- md:version 9.1.10 -->
+<!-- md:default none -->
+
+<p>Use this setting to set options for the layout specified via [<code>cards_layout</code>]
+[config.cards_layout] (if the layout supports it), which allows for making
+layouts easily and entirely configurable:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout_options:
+        &lt;option&gt;: &lt;value&gt;
+</code></pre>
+<p>When creating a <a href="../../setup/setting-up-social-cards/#customization">custom layout</a>, you are completely free in
+defining which parts of your layout can be parametrized. The <a href="#layouts"><code>default</code> layouts</a> included with the plugin support the following options:</p>
+<div class="mdx-columns" markdown>
+
+- [`background_color`][option.background_color]
+- [`background_image`][option.background_image]
+- [`color`][option.color]
+- [`font_family`][option.font_family]
+- [`font_variant`][option.font_variant]
+- [`logo`][option.logo]
+- [`title`][option.title]
+- [`description`][option.description]
+
+</div>
+
+<hr />
+<h4 id="_12"><!-- md:setting config.cards_include --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.35.0 -->
+<!-- md:default none -->
+
+<p>Use this setting to enable social card generation for subsections of your
+project, e.g., when using <a href="../#multiple-instances">multiple instances</a> of the plugin to generate
+different social cards for different subsections:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_include:
+        - blog/*
+</code></pre>
+<p>This configuration enables social card generation for all pages that are
+contained in the <code>blog</code> folder and its subfolders inside the [<code>docs</code> directory]
+[mkdocs.docs_dir].</p>
+<hr />
+<h4 id="_13"><!-- md:setting config.cards_exclude --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.35.0 -->
+<!-- md:default none -->
+
+<p>Use this setting to disable social card generation for subsections of your
+project, e.g., when using <a href="../#multiple-instances">multiple instances</a> of the plugin to generate
+different social cards for different subsections:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_exclude:
+        - changelog/*
+</code></pre>
+<p>This configuration disables social card generation for all pages that are
+contained in the <code>changelog</code> folder and its subfolders inside the
+[<code>docs</code> directory][mkdocs.docs_dir].</p>
+<h3 id="debugging">Debugging</h3>
+<p>The plugin includes a special mode for debugging layouts, which is very useful
+when creating <a href="../../setup/setting-up-social-cards/#customization">custom layouts</a>, as it allows for quicker iteration and better
+understanding of composition.</p>
+<p>The following settings are available for debugging:</p>
+<hr />
+<h4 id="_14"><!-- md:setting config.debug --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default `false` -->
+
+<p>Use this setting to enable a special mode for debugging your layout, which
+renders each layer with a colored outline and its <code>x</code> and <code>y</code> offsets, and
+overlays a dot grid for alignment, so it's easier to understand how the
+distinct layers of your layout are composed together:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      debug: true
+</code></pre>
+<hr />
+<h4 id="_15"><!-- md:setting config.debug_on_build --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.34.1 -->
+<!-- md:default `false` -->
+
+<p>By default, the plugin automatically disables [<code>debug</code>][config.debug] mode when
+<a href="../../creating-your-site/#building-your-site">building your project</a>, so you can be sure that debug overlays are never
+deployed to production. If you want to change that, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      debug_on_build: true
+</code></pre>
+<p>It's normally not necessary to change this setting, as it's just intended to
+be a safety net.</p>
+<hr />
+<h4 id="_16"><!-- md:setting config.debug_grid --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default `true` -->
+
+<p>When [<code>debug</code>][config.debug] mode is enabled, this setting specifies whether a
+dot grid is rendered on top of all layers, to allow for better alignment. If you
+want to switch the grid off, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      debug_grid: false
+</code></pre>
+<hr />
+<h4 id="_17"><!-- md:setting config.debug_grid_step --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default `32` -->
+
+<p>Use this setting to specify the step size of the dot grid in pixels, if enabled,
+which can be useful to create perfectly aligned layers for ideal composition.
+It you want to change it, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      debug_grid_step: 64
+</code></pre>
+<hr />
+<h4 id="_18"><!-- md:setting config.debug_color --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default `grey` -->
+
+<p>Use this setting to specify the color of the outlines that are added to each
+layer and the dot grid that is rendered on top of all layers. If you need to
+change it, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      debug_color: yellow
+</code></pre>
+<p>In rare cases, it might be necessary to change this setting if the dot grid or
+the outlines are hard to distinguish, as the plugin will automatically adjust
+the color if not explicitly set.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="metadata">Metadata</h3>
+<p>The plugin allows to override a subset of settings through metadata (front
+matter) in order to customize social card generation, e.g., to set <a href="#layouts">options for
+the included <code>default</code> layouts</a> for a single page, or even
+<a href="../meta/#how-it-works">for an entire subsection</a> of your project by leveraging the <a href="../meta/">meta</a> plugin.</p>
+<p>The following properties are available:</p>
+<hr />
+<h4 id="_19"><!-- md:setting meta.social.cards --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.37.0 -->
+<!-- md:flag metadata -->
+<!-- md:default none -->
+
+<p>Use this property to override the [<code>cards</code>][config.cards] setting for the given
+page:</p>
+<pre><code class="language-yaml">---
+social:
+  cards: false
+---
+
+# Page title
+...
+</code></pre>
+<hr />
+<h4 id="_20"><!-- md:setting meta.social.cards_layout --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.37.0 -->
+<!-- md:flag metadata -->
+<!-- md:default none -->
+<!-- md:flag experimental -->
+
+<p>Use this property to override the [<code>cards_layout</code>][config.cards_layout] setting
+for the given page:</p>
+<pre><code class="language-yaml">---
+social:
+  cards_layout: my-custom-layout
+---
+
+# Page title
+...
+</code></pre>
+<hr />
+<h4 id="_21"><!-- md:setting meta.social.cards_layout_options --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.37.0 -->
+<!-- md:flag metadata -->
+<!-- md:default none -->
+
+<p>Use this property to override the [<code>cards_layout_options</code>]
+[config.cards_layout_options] setting for the given page:</p>
+<pre><code class="language-yaml">---
+social:
+  cards_layout_options:
+    background_color: blue             # Change background color
+    background_image: null             # Remove background image
+---
+
+# Page title
+...
+</code></pre>
+<p>Setting an option to <code>#!yaml null</code> resets the option.</p>
+<h3 id="layouts">Layouts</h3>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+
+<p>While it is possible and simple to build <a href="../../setup/setting-up-social-cards/#customization">custom layouts</a>, the plugin ships
+several predefined layouts, all of which are prefixed with <code>default</code>. The
+following layouts are included:</p>
+<p>=== "<code>default</code>"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout: default
+```
+
+&lt;div class="result" markdown&gt;
+
+![Layout default]
+
+This layout sets the following defaults:
+
+- [`background_color`][option.background_color]
+  – &lt;!-- md:default [`theme.palette.primary`][primary color] --&gt;
+
+- [`font_family`][option.font_family]
+  – &lt;!-- md:default [`theme.font.text`][font] --&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p>=== "<code>default/variant</code>"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout: default/variant
+```
+
+&lt;div class="result" markdown&gt;
+
+![Layout default variant]
+
+This layout includes the [page icon] and sets the following defaults:
+
+- [`background_color`][option.background_color]
+  – &lt;!-- md:default [`theme.palette.primary`][primary color] --&gt;
+
+- [`font_family`][option.font_family]
+  – &lt;!-- md:default [`theme.font.text`][font] --&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p>=== "<code>default/accent</code>"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout: default/accent
+```
+
+&lt;div class="result" markdown&gt;
+
+![Layout default accent]
+
+This layout sets the following defaults:
+
+- [`background_color`][option.background_color]
+  – &lt;!-- md:default [`theme.palette.accent`][accent color] --&gt;
+
+- [`font_family`][option.font_family]
+  – &lt;!-- md:default [`theme.font.text`][font] --&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p>=== "<code>default/invert</code>"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout: default/invert
+```
+
+&lt;div class="result" markdown&gt;
+
+![Layout default invert]
+
+This layout sets the following defaults:
+
+- [`color`][option.background_color]
+  – &lt;!-- md:default [`theme.palette.primary`][primary color] --&gt;
+
+- [`font_family`][option.font_family]
+  – &lt;!-- md:default [`theme.font.text`][font] --&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p>=== "<code>default/only/image</code>"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout: default/only/image
+      cards_layout_options:
+        background_image: layouts/background.png
+
+```
+
+&lt;div class="result" markdown&gt;
+
+This layout only shows the given background image and scales it to cover.
+
+&lt;/div&gt;
+</code></pre>
+<p>The <a href="#layouts"><code>default</code> layouts</a> are very flexible and comfortable to
+use, as they replicate the original behavior of the plugin, sourcing default
+values for all options from other <code>theme</code> settings.</p>
+<p>The following options are available:</p>
+<hr />
+<h4 id="_22"><!-- md:setting option.background_color --></h4>
+<!-- md:version 9.1.10 -->
+<!-- md:default computed -->
+
+<p>Use this option to change the background color of the generated social card.
+The value can be set to a valid color value <a href="https://pillow.readthedocs.io/en/stable/reference/ImageColor.html#color-names">supported by pillow</a>, the imaging
+library used for card generation:</p>
+<p>=== "Hexadecimal"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout_options:
+        background_color: "#ff1493" # (1)!
+```
+
+1.  The following notations are supported, whereas each character after the
+    `#` must be a valid hexadecimal in the range `#!css 0-F`:
+
+    - `#!css #rgb` – Color (short)
+    - `#!css #rgba` – Color + alpha (short)
+    - `#!css #rrggbb` – Color
+    - `#!css #rrggbbaa` – Color + alpha
+</code></pre>
+<p>=== "Color function"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout_options:
+        background_color: rgb(255, 20, 147) # (1)!
+```
+
+1.  The following functions are supported, listing the allowed maximum
+    values with the minimum values all being `#!css 0` or `#!css 0%`:
+
+    - `#!css rgb(255, 255, 255)` – Red, green and blue
+    - `#!css hsl(360, 100%, 100%)` – Hue, saturation and lightness
+    - `#!css hsv(360, 100%, 100%)` – Hue, saturation and value
+</code></pre>
+<p>=== "Color name"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout_options:
+        background_color: deeppink # (1)!
+```
+
+1.  See the [`&lt;named-color&gt;`][named-color] CSS data type for a list of
+    supported color names. Note that some might not be available.
+</code></pre>
+<p>If this options is used together with [<code>background_image</code>]
+[option.background_image], the color is rendered on top of the image which
+allows for tinting images. If you want to remove the background color, use:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout_options:
+        background_color: transparent
+</code></pre>
+<hr />
+<h4 id="_23"><!-- md:setting option.background_image --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.33.0 -->
+<!-- md:default none -->
+
+<p>Use this option to define a background image for the generated social card. Note
+that the image is tinted with the [<code>background_color</code>][option.background_color],
+which can also be set to <code>transparent</code>:</p>
+<p>=== "Image"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout_options:
+        background_image: layouts/background.png
+        background_color: transparent
+```
+</code></pre>
+<p>=== "Image with tint"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout_options:
+        background_image: layouts/background.png
+        background_color: "#ff149366"
+```
+</code></pre>
+<p>The provided path is resolved from the root directory.</p>
+<hr />
+<h4 id="_24"><!-- md:setting option.color --></h4>
+<!-- md:version 9.1.10 -->
+<!-- md:default computed -->
+
+<p>Use this option to change the foreground color of the generated social card.
+The value can be set to a valid color value <a href="https://pillow.readthedocs.io/en/stable/reference/ImageColor.html#color-names">supported by pillow</a>, the imaging
+library used for card generation:</p>
+<p>=== "Hexadecimal"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout_options:
+        color: "#ffffff" # (1)!
+```
+
+1.  The following notations are supported, whereas each character after the
+    `#` must be a valid hexadecimal in the range `#!css 0-F`:
+
+    - `#!css #rgb` – Color (short)
+    - `#!css #rgba` – Color + alpha (short)
+    - `#!css #rrggbb` – Color
+    - `#!css #rrggbbaa` – Color + alpha
+</code></pre>
+<p>=== "Color function"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout_options:
+        color: rgb(255, 255, 255) # (1)!
+```
+
+1.  The following functions are supported, listing the allowed maximum
+    values with the minimum values all being `#!css 0` or `#!css 0%`:
+
+    - `#!css rgb(255, 255, 255)` – Red, green and blue
+    - `#!css hsl(360, 100%, 100%)` – Hue, saturation and lightness
+    - `#!css hsv(360, 100%, 100%)` – Hue, saturation and value
+</code></pre>
+<p>=== "Color name"</p>
+<pre><code>``` yaml
+plugins:
+  - social:
+      cards_layout_options:
+        color: white # (1)!
+```
+
+1.  See the [`&lt;named-color&gt;`][named-color] CSS data type for a list of
+    supported color names. Note that some might not be available.
+</code></pre>
+<hr />
+<h4 id="_25"><!-- md:setting option.font_family --></h4>
+<!-- md:version 9.1.10 -->
+<!-- md:default computed -->
+
+<p>Use this option to change the font family of the generated social card. The
+plugin automatically downloads the font from <a href="https://fonts.google.com/">Google Fonts</a>, so the font must
+point to an existing Google Font:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout_options:
+        font_family: Ubuntu
+</code></pre>
+<p>When you've found a font that you like on <a href="https://fonts.google.com/">Google Fonts</a>, you can just copy the
+name from the font's specimen page and use it as the value for this option –
+no further configuration needed.</p>
+<hr />
+<h4 id="_26"><!-- md:setting option.font_variant --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.53.3 -->
+<!-- md:default none -->
+
+<p>Use this option to change the font variant used to generate the social card.
+If the downloaded font has variants like <code>Condensed</code> or <code>Expanded</code>, you can set
+them with:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout_options:
+        font_variant: Condensed
+</code></pre>
+<p>The variant is combined with the style as used in the custom layout, so the
+plugin is instructed to use combinations like <code>Condensed Regular</code> or
+<code>Expanded Bold</code>.</p>
+<hr />
+<h4 id="_27"><!-- md:setting option.logo --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.40.0 -->
+<!-- md:default computed -->
+
+<p>Use this option to change the logo that is used in the generated social card.
+By default, the plugin uses the <a href="../../setup/changing-the-logo-and-icons/#logo-image"><code>theme.logo</code></a> or <a href="../../setup/changing-the-logo-and-icons/#logo-icon-bundled"><code>theme.icon.logo</code></a> setting from <code>mkdocs.yml</code>. You can change it with:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout_options:
+        logo: layouts/logo.png
+</code></pre>
+<p>The provided path is resolved from the root directory.</p>
+<hr />
+<h4 id="_28"><!-- md:setting option.title --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.40.0 -->
+<!-- md:default computed -->
+
+<p>Use this option to change the title of the generated social card. This overrides
+the computed page title as assigned by MkDocs, as well as the <a href="../../reference/#setting-the-page-title"><code>title</code></a> metadata property:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout_options:
+        title: My custom title
+</code></pre>
+<hr />
+<h4 id="_29"><!-- md:setting option.description --></h4>
+<!-- md:sponsors -->
+<!-- md:version insiders-4.40.0 -->
+<!-- md:default computed -->
+
+<p>Use this option to change the description of the generated social card. This
+overrides the set [<code>site_description</code>][mkdocs.site_description], if defined, as
+well as the <a href="../../reference/#setting-the-page-description"><code>description</code></a> metadata property:</p>
+<pre><code class="language-yaml">plugins:
+  - social:
+      cards_layout_options:
+        description: My custom description
+</code></pre>
+<hr />
+<p>!!! question "Missing something?"</p>
+<pre><code>When setting up social cards, you might discover that you're missing
+specific functionality – we're happy to consider adding it to the plugin!
+You can [open a discussion] to ask a question, or create a [change request]
+on our [issue tracker], so we can find out if it might be a good fit for
+the plugin.
+</code></pre>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
