@@ -5,8 +5,7 @@ site_url: https://crearobotics.github.io/PRIMO-Docs/
 #site_logo: images/logo.png
 #site_icon: images/favicon.ico
 #repo_url:
-steps:
-  - run: mkdocs gh-deploy --force
+
 
 nav:
   - Home: index.md

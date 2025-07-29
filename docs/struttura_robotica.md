@@ -42,4 +42,3 @@ Questa struttura è molto diffusa nell'industria, perché permette di raggiunger
 ## Cinematica a catena aperta (visiva)
 
 PRIMO ha una **struttura a catena aperta**: ogni giunto è collegato al successivo in sequenza, come i segmenti di un braccio umano.
-
