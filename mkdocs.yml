@@ -11,7 +11,7 @@ steps:
 nav:
   - Home: index.md
   - Fondamenti: cos_e_la_robotica.md
-  - Struttua: struttura_robotica.md
+  - Struttura: struttura_robotica.md
   - Componenti: componenti_primo.md
   - Controllo: controllo_robot.md
   - Programmazione: programmazione.md
