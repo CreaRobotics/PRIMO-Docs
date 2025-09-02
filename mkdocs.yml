@@ -20,14 +20,43 @@ nav:
 
 
 theme:
+  language: it
   name: material
   palette:
-    scheme: default
-    primary: orange
-    accent: amber
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: orange
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
   features:
     - navigation.tabs
     - content.code.copy
   icon:
     logo: fontawesome/solid/robot
+
+extra:
+  alternate:
+    - name: Italiano
+      link: /it/
+      lang: it
     
