@@ -2,7 +2,7 @@
 
 Benvenuto! Questo sito è dedicato a **PRIMO**, un braccio robotico a 6 assi open‑source progettato per farti scoprire il mondo della robotica industriale. Qui troverai tutte le risorse necessarie per imparare i concetti fondamentali della robotica e applicarli concretamente attraverso l’interazione con un robot reale.
 
-![image](./assets/images/primo-cover.png)
+![image](./assets/images/DSC_6715.png)
 
 ---
 
