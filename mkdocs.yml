@@ -18,7 +18,6 @@ nav:
   - Approfondimenti: approfondimenti.md
 #theme: readthedocs
 
-
 theme:
   language: it
   name: material
@@ -54,9 +53,15 @@ theme:
   icon:
     logo: fontawesome/solid/robot
 
+plugins:
+  - search
+  - to-pdf:
+      download_link: header
+  
 extra:
   alternate:
     - name: Italiano
       link: /it/
       lang: it
+
     
